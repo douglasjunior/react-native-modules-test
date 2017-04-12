@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+import MeuComponente from './src/MeuComponente';
+
 export default class ReactNativeModulesTest extends Component {
   render() {
     return (
@@ -26,6 +28,9 @@ export default class ReactNativeModulesTest extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+
+        <MeuComponente plataforma="Android" />
+      
       </View>
     );
   }
