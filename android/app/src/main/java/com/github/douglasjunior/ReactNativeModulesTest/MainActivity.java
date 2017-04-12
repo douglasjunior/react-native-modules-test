@@ -1,4 +1,4 @@
-package com.reactnativemodulestest;
+package com.github.douglasjunior.ReactNativeModulesTest;
 
 import com.facebook.react.ReactActivity;
 
