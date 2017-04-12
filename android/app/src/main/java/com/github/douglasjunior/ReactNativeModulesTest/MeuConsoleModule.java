@@ -41,17 +41,16 @@ public class MeuConsoleModule extends ReactContextBaseJavaModule {
             final ReadableType type = object.getType(key);
             switch (type) {
                 case Boolean:
-                    Log.d("MEU_CONSOLE", object.getBoolean(key) + "");
+                    Log.d("MEU_CONSOLE", key + ": " + object.getBoolean(key) + "");
                     break;
                 case Number:
-                    Log.d("MEU_CONSOLE", object.getDouble(key) + "");
+                    Log.d("MEU_CONSOLE", key + ": " + object.getDouble(key) + "");
                     break;
                 case String:
-                    Log.d("MEU_CONSOLE", object.getString(key));
+                    Log.d("MEU_CONSOLE", key + ": " + object.getString(key));
                     break;
             }
         }
-
     }
 
     @ReactMethod
@@ -61,7 +60,7 @@ public class MeuConsoleModule extends ReactContextBaseJavaModule {
             error.putString("code", "100");
             error.putString("message", "O parâmetro de texto não pode ser nulo.");
 
-            callError.invoke(callError);
+            callError.invoke(error);
             return;
         }
 
